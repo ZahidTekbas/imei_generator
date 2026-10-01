@@ -1,9 +1,11 @@
 import 'package:imei_generator/imei_generator.dart';
 
 void main() {
-  var imeiGenerator = ImeiGenerator();
-  var imei = imeiGenerator.generateImei();
-  print(imei);
-  var isValid = imeiGenerator.isValidImei(list: imei);
-  print("isValid Imei: $isValid");
+  final generator = ImeiGenerator();
+
+  final imei = generator.generate();
+  print('Generated IMEI: $imei');
+  print('Valid: ${isValidImei(imei)}');
+
+  print('490154203237519 valid: ${isValidImei('490154203237519')}');
 }
