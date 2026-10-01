@@ -1,8 +1,13 @@
-/// Support for doing something awesome.
+/// Generate and validate IMEI (International Mobile Equipment Identity)
+/// numbers.
 ///
-/// More dartdocs go here.
-library imei_generator;
+/// ```dart
+/// import 'package:imei_generator/imei_generator.dart';
+///
+/// final imei = ImeiGenerator().generate();
+/// print(isValidImei(imei)); // true
+/// ```
+library;
 
-export 'src/imei_generator_base.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/imei_generator.dart' show ImeiGenerator;
+export 'src/imei_validator.dart' show isValidImei;
